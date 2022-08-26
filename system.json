@@ -1,0 +1,35 @@
+{
+    "id": "elitya-world",
+    "name":"elitya-world",
+    "title": "Elitya's World system",
+    "description": "Everything you need to start playing with elitya's world game system",
+    "version": "0.0.1",
+    "minimumCoreVersion":"0.9.269",
+    "compatibleCoreVersion":"0.9.269",
+    "templateVersion":2,
+    "authors": [
+      {
+        "name": "Quentin Haenn",
+        "url": "https://github.com/quentinhaenn",
+        "email": "quentin.haenn.pro@gmail.com"
+      }
+    ],
+    "scripts": [
+    ],
+    "esmodules": [
+        "module/elitya-world.js"
+    ],
+    "styles": [
+      "styles/system-styles.css"
+    ],
+    "packs":[],
+  "languages": [
+    ],
+    "socket": false,
+    "gridDistance": 1.5,
+    "gridUnits": "m",
+    "primaryTokenAttribute": "resources.health",
+    "secondaryTokenAttribute": "resources.power",
+    "url": "https://github.com/quentinhaenn/elitya-world",
+    "license":"LICENSE.txt"
+  }

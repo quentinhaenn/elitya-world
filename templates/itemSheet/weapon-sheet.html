@@ -1,0 +1,13 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="128" width="128"/>
+    <h1><input name="name" type="text" value={{item.name}}/> </h1>
+    <label>Description
+        <input type="text" name="data.description" value="{{data.description}}"/>
+    </label>
+    <label>Damages
+        <input type="text" name="data.damages" value="{{data.damages}}"/>
+    </label>
+    <label>Health
+        <input type="text" name="data.health" value="{{data.health}}" />
+    </label>
+</form>

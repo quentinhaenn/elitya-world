@@ -1,0 +1,31 @@
+{
+    "Actor":{
+        "types":["personnage","pnj"],
+        "personnage":{
+        "pv":100,
+        "experience":0,
+        "mana":100,
+        "attributs":{
+            "force" : {
+                "value":50 
+            },
+            "agilite" : {"value":50 },
+            "constitution" : {"value":50 },
+            "intelligence" : {"value":50 }
+        }
+    }
+    },
+    "Item":{
+        "types":["weapon","armor"],
+        "weapon":{
+            "description":"",
+            "damages":"1d10 + 2",
+            "health": "50"
+        },
+        "armor":{
+            "description":"",
+            "value":10,
+            "health":"50"
+        }
+    }
+}
