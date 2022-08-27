@@ -20,10 +20,15 @@
         "module/elitya-world.mjs"
     ],
     "styles": [
-      "styles/system-styles.css"
+      "styles/css/elitya-world.css"
     ],
     "packs":[],
   "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
     ],
     "socket": false,
     "gridDistance": 1.5,

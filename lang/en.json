@@ -1,0 +1,9 @@
+{
+    "ELITYAWORLD.ActorName": "Actor's Name",
+    "ELITYAWORLD.NewItem": "New {itemType}",
+    "ELITYAWORLD.AbilityStr":"Strength",
+    "ELITYAWORLD.AbilityDex": "Dexterity",
+    "ELITYAWORLD.AbilityCon": "Constitution",
+    "ELITYAWORLD.AbilityInt": "Intelligence",
+    "ELITYAWORLD.AbilityCha": "Charisma"
+}

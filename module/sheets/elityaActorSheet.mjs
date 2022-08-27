@@ -1,9 +1,13 @@
-export class ElityaActorSheet extends ActorSheet {
+import { ELITYAWORLD } from "../helpers/config.mjs";
+
+export default class ElityaActorSheet extends ActorSheet {
 
     static get defaultOptions() {
-        return mergeObject(super.defaultOptions, {
+        return foundry.utils.mergeObject(super.defaultOptions, {
+            classes: ["elityaworld", "sheet", "actor"],
             width: 600,
-            height: 600
+            height: 600,
+            tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "features" }]
         });
     }
 
@@ -22,19 +26,18 @@ export class ElityaActorSheet extends ActorSheet {
         context.data = actorData.data;
         context.flags = actorData.flags;
 
-        if (actorData.type == 'character') {
-            this._prepareItems(context);
-            this._prepareCharacterData(context);
+        switch(actorData.type) {
+            case 'character':
+                this._prepareItems(context);
+                this._prepareCharacterData(context);
+                break;
+            case 'npc':
+                this._prepareItems(context);
+                break;
+            case 'monster':
+                this._prepareMonsterData(context);
+                break;
         }
-
-        if(actorData.type == 'npc'){
-            this._prepareItems(context);
-        }
-
-        if(actorData.type == 'monster') {
-            this._prepareMonsterData(context);
-        }
-
 
         context.rollData = context.actor.getRollData();
 
@@ -78,7 +81,7 @@ export class ElityaActorSheet extends ActorSheet {
 
     _prepareCharacterData(context) {
         for (let [k,v] of Object.entries(context.data.abilities)){
-            v.label = game.i18n.localize(CONFIG.ELITYAWORLD.abilities[k]) ?? k;
+            v.label = game.i18n.localize(ELITYAWORLD.abilities[k]) ?? k;
         }
     }
 
@@ -102,6 +105,8 @@ export class ElityaActorSheet extends ActorSheet {
             item.delete();
             li.slideUp(200, () => this.render(false));
         });
+
+        html.find('.rollable').click(this._onRoll.bind(this));
     }
 
 
@@ -111,7 +116,7 @@ export class ElityaActorSheet extends ActorSheet {
         const header = event.currentTarget;
         const type = header.dataset.type;
         const data = duplicate(header.dataset);
-        const name = `New ${type.capitalize()}`;
+        const name = game.i18n.format(ELITYAWORLD.NewItem, {itemType: type.capitalize()});
 
         const itemData = {
             name: name,
@@ -122,6 +127,21 @@ export class ElityaActorSheet extends ActorSheet {
         delete itemData.data["type"];
 
         return await Item.create(itemData, {parent: this.actor});
+    }
+
+    _onRoll(event) {
+        event.preventDefault();
+        const element = event.currentTarget;
+        const dataset = element.dataset;
+
+        if (dataset.roll) {
+            let roll = new Roll(dataset.roll, this.actor.data.data);
+            let label = dataset.label ? `Rolling ${dataset.label}` : '';
+            roll.toMessage({
+                speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+                flavor: label
+            });
+        }
     }
 
 }
