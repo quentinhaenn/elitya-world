@@ -17,7 +17,7 @@
     "scripts": [
     ],
     "esmodules": [
-        "module/elitya-world.js"
+        "module/elitya-world.mjs"
     ],
     "styles": [
       "styles/system-styles.css"

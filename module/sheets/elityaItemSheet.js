@@ -2,7 +2,7 @@ export default class ElityaItemSheet extends ItemSheet {
     get template(){
         console.log(`elitya | Récupération du fichier html ${this.item.data.type}-sheet.`);
 
-        return `systems/elitya-world/templates/itemSheet/${this.item.data.type}-sheet.html`;
+        return `systems/elitya-world/templates/item/${this.item.data.type}-sheet.html`;
     }
 
 

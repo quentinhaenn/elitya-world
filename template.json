@@ -1,31 +1,103 @@
 {
     "Actor":{
-        "types":["personnage","pnj"],
-        "personnage":{
-        "pv":100,
-        "experience":0,
-        "mana":100,
-        "attributs":{
-            "force" : {
-                "value":50 
+        "types":["character","npc","monster"],
+        "templates": {
+            "base": {
+                "health" : {
+                    "value": 10,
+                    "min": 0,
+                    "max": 100
+                },
+                "mana" : {
+                    "value": 10,
+                    "min": 0,
+                    "max": 100
+                },
+                "description":""
             },
-            "agilite" : {"value":50 },
-            "constitution" : {"value":50 },
-            "intelligence" : {"value":50 }
+            "person":{
+                "biography":"",
+                "sex":"",
+                "age":25
+            }
+        },
+        "character" : {
+            "templates": ["base","person"],
+            "attributes" : {
+                "level": {"value": 1},
+                "experience":{"value": 0, "next": 100},
+                "mental-health" : {
+                    "value":0,
+                    "min": -5,
+                    "max": 5
+                }
+            },
+            "abilities": {
+                "str":{
+                    "value":10
+                },
+                "dex":{
+                    "value":10
+                },
+                "con":{
+                    "value":10
+                },
+                "int":{
+                    "value":10
+                },
+                "cha":{
+                    "value":10
+                }
+            }
+        },
+        "npc": {
+            "templates":["base","person"]
         }
-    }
     },
     "Item":{
-        "types":["weapon","armor"],
+        "types":["weapon","armor","spell", "consumable", "item"],
+        "templates":{
+            "rarity" : {
+                "rarity": "Common",
+                "price" : 20
+            },
+            "base" : {
+                "description" : ""
+            },
+            "equipement" :{
+                "health" : {
+                    "value" : 20,
+                    "min" : 0,
+                    "max" : 20
+                }
+            },
+            "base-consumable" : {
+                "effect": ""
+            }
+        },
         "weapon":{
-            "description":"",
-            "damages":"1d10 + 2",
-            "health": "50"
+            "templates":["base","rarity","equipement"],
+            "damage": "1d",
+            "weight" : "lightweight"
         },
         "armor":{
-            "description":"",
-            "value":10,
-            "health":"50"
+            "templates":["base","equipement", "rarity"],
+            "armor": 10,
+            "weight" : "lightweight"
+        },
+        "spell": {
+            "templates":["base","rarity","base-consumable"],
+            "magicType": "common",
+            "cost": 2,
+            "damages" : "1d"
+        },
+        "consumable":{
+            "templates":["base","base-consumable","rarity"],
+            "weight" : "lightweight"
+        },
+        "item":{
+            "templates" :["base","rarity"],
+            "weight" : "lightweight"
         }
     }
 }
