@@ -5,5 +5,21 @@
     "ELITYAWORLD.AbilityDex": "Dexterity",
     "ELITYAWORLD.AbilityCon": "Constitution",
     "ELITYAWORLD.AbilityInt": "Intelligence",
-    "ELITYAWORLD.AbilityCha": "Charisma"
+    "ELITYAWORLD.AbilityCha": "Charisma",
+    "ELITYAWORLD.Level": "Level",
+    "ELITYAWORLD.Class": "Class",
+    "ELITYAWORLD.Race":"Race",
+    "ELITYAWORLD.Age" : "Age",
+    "ELITYAWORLD.Height": "Height",
+    "ELITYAWORLD.HitPoints": "HP",
+    "ELITYAWORLD.HitPointMax": "HP Max",
+    "ELITYAWORLD.Mana": "Mana",
+    "ELITYAWORLD.ManaMax": "Mana Max",
+    "ELITYAWORLD.Endurance": "Endurance",
+    "ELITYAWORLD.EnduranceMax": "Endurance Max",
+    "ELITYAWORLD.Attributes": "Attributes",
+    "ELITYAWORLD.Inventory": "Inventory",
+    "ELITYAWORLD.Effects" : "Effects",
+    "ELITYAWORLD.Biography": "Biography",
+    "ELITYAWORLD.SkillConfigure" : "Skill Configuration"
 }
