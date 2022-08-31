@@ -1,24 +1,139 @@
 {
     "Actor":{
-        "types":["character","npc","monster"],
+        "types":["character","npc"],
         "templates": {
             "base": {
-                "health" : {
-                    "value": 10,
-                    "min": 0,
-                    "max": 100
+                "attributes":{
+                    "hp" : {
+                        "value": 10,
+                        "max": 100
+                    },
+                    "mana" : {
+                        "value": 10,
+                        "max": 100
+                    }
                 },
-                "mana" : {
-                    "value": 10,
-                    "min": 0,
-                    "max": 100
+                "abilities" :{
+                    "phy": {
+                        "value": 10
+                    },
+                    "dex": {
+                        "value": 10
+                    },
+                    "int": {
+                        "value": 10
+                    },
+                    "cha": {
+                        "value": 10
+                    },
+                    "agi": {
+                        "value": 10
+                    },
+                    "fur": {
+                        "value": 10
+                    }
+                },
+                "details" : {
+                    "biography" :{
+                        "value" : ""
+                    }
                 },
                 "description":""
             },
             "person":{
-                "biography":"",
-                "sex":"",
-                "age":25
+                "details" : {
+                    "sex":"",
+                    "age":25,
+                    "race": ""
+                },
+                "skills":{
+                    "heavyWea" : {
+                        "value":0,
+                        "ability":"phy"
+                    },
+                    "mel" : {
+                        "value":0,
+                        "ability":"phy"
+                    },
+                    "par" : {
+                        "value":0,
+                        "ability":"phy"
+                    },
+                    "for" : {
+                        "value":0,
+                        "ability":"phy"
+                    },
+                    "lightWea": {
+                        "value":0,
+                        "ability":"dex"
+                    },
+                    "aim": {
+                        "value":0,
+                        "ability":"dex"
+                    },
+                    "cra": {
+                        "value":0,
+                        "ability":"dex"
+                    },
+                    "pol":{
+                        "value": 0,
+                        "ability": "cha"
+                    },
+                    "speech": {
+                        "value": 0,
+                        "ability":"cha"
+                    },
+                    "worldKno":{
+                        "value":0,
+                        "ability":"int"
+                    },
+                    "inv":{
+                        "value":0,
+                        "ability":"int"
+                    },
+                    "alc":{
+                        "value":0,
+                        "ability":"int"
+                    },
+                    "acc":{
+                        "value":0,
+                        "ability":"agi"
+                    },
+                    "cli":{
+                        "value":0,
+                        "ability":"agi"
+                    },
+                    "dod":{
+                        "value":0,
+                        "ability":"agi"
+                    },
+                    "cam":{
+                        "value":0,
+                        "ability":"fur"
+                    },
+                    "tra":{
+                        "value":0,
+                        "ability":"fur"
+                    },
+                    "spi":{
+                        "value":0,
+                        "ability":"fur"
+                    }
+                }
+            },
+            "traits":{
+                "languages": {
+                    "value":[],
+                    "custom": ""
+                },
+                "special":{
+                    "value":[],
+                    "custom":""
+                }
+            },
+            "spells":{
+                "value":[],
+                "custom":""
             }
         },
         "character" : {
@@ -30,74 +145,75 @@
                     "value":0,
                     "min": -5,
                     "max": 5
+                },
+                "endurance": {
+                    "value": 10,
+                    "min":0,
+                    "max":100
                 }
             },
-            "abilities": {
-                "str":{
-                    "value":10
-                },
-                "dex":{
-                    "value":10
-                },
-                "con":{
-                    "value":10
-                },
-                "int":{
-                    "value":10
-                },
-                "cha":{
-                    "value":10
-                }
+            "details": {
+                "appearance":"",
+                "personality":"",
+                "psychology":"",
+                "phobia":"",
+                "class": ""
             }
         },
         "npc": {
-            "templates":["base","person"]
+            "templates":["base","person"],
+            "details" :{
+                "appearance":""
+            }
         }
     },
     "Item":{
         "types":["weapon","armor","spell", "consumable", "item"],
         "templates":{
-            "rarity" : {
-                "rarity": "Common",
-                "price" : 20
+            "itemDescription" :{
+                "value":"",
+                "chat":""
             },
-            "base" : {
-                "description" : ""
+            "physicalItem" : {
+                "weight": 0,
+                "price":0,
+                "rarity": "",
+                "quantity": ""
             },
             "equipement" :{
                 "health" : {
                     "value" : 20,
                     "min" : 0,
                     "max" : 20
-                }
+                },
+                "quality" : "novice"
             },
             "base-consumable" : {
                 "effect": ""
+            },
+            "action":{
+                "ability" : "",
+                "formula": ""
             }
         },
         "weapon":{
-            "templates":["base","rarity","equipement"],
-            "damage": "1d",
-            "weight" : "lightweight"
+            "templates":["itemDescription","physicalItem","equipement", "action"],
+            "weaponType": "simpleM"
         },
         "armor":{
-            "templates":["base","equipement", "rarity"],
-            "armor": 10,
-            "weight" : "lightweight"
+            "templates":["itemDescription","equipement", "physicalItem"],
+            "armor":5
         },
         "spell": {
-            "templates":["base","rarity","base-consumable"],
+            "templates":["itemDescription","base-consumable", "action"],
             "magicType": "common",
-            "cost": 2,
-            "damages" : "1d"
+            "cost": 2
         },
         "consumable":{
-            "templates":["base","base-consumable","rarity"],
-            "weight" : "lightweight"
+            "templates":["itemDescription","base-consumable", "physicalItem"]
         },
         "item":{
-            "templates" :["base","rarity"],
-            "weight" : "lightweight"
+            "templates" :["itemDescription","physicalItem"]
         }
     }
 }

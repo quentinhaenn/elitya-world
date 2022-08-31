@@ -22,6 +22,7 @@
 
             {{!-- Character Summary --}}
             <ul class="summary flexrow">
+                
                 <li>
                     <input type="text" name="data.details.race" value="{{data.details.race}}" placeholder="{{ localize 'ELITYAWORLD.Race' }}"/>
                 </li>
@@ -29,7 +30,7 @@
                     {{#if labels.background}}
                         <span title="{{localize 'ELITYAWORLD.Class'}}">{{labels.background}}</span>
                     {{else}}
-                        <input type="text" name="data.details.Class" value="{{data.details.Class}}" placeholder="{{ localize 'ELITYAWORLD.Class' }}"/>
+                        <input type="text" name="data.details.class" value="{{data.details.class}}" placeholder="{{ localize 'ELITYAWORLD.Class' }}"/>
                     {{/if}}
                 </li>
                 <li>

@@ -34,9 +34,6 @@ export default class ElityaActorSheet extends ActorSheet {
             case 'npc':
                 this._prepareItems(context);
                 break;
-            case 'monster':
-                this._prepareMonsterData(context);
-                break;
         }
 
         context.rollData = context.actor.getRollData();
@@ -51,9 +48,9 @@ export default class ElityaActorSheet extends ActorSheet {
         const gear = [];
         const consumables = [];
         const spells = {
-            "eau":[],
-            "terre":[],
-            "feu":[],
+            "water":[],
+            "earth":[],
+            "fire":[],
             "common": []
         };
 
