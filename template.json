@@ -44,7 +44,8 @@
                 "details" : {
                     "sex":"",
                     "age":25,
-                    "race": ""
+                    "race": "",
+                    "height":""
                 },
                 "skills":{
                     "heavyWea" : {
@@ -141,7 +142,7 @@
             "attributes" : {
                 "level": {"value": 1},
                 "experience":{"value": 0, "next": 100},
-                "mental-health" : {
+                "mentalHealth" : {
                     "value":0,
                     "min": -5,
                     "max": 5

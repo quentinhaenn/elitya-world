@@ -40,12 +40,12 @@
   
         </div>
 
-        <div class="abilities grid grid-3col">
+        <div class="abilities-scores flexrow">
             {{#each data.abilities as |ability key|}}
-                <div class="ability flexrow flex-group-center">
-                    <label for="data.abilities.{{key}}.value" class="resource-label rollable flexlarge align-left" data-roll="1d100" data-label="{{ability.label}}">{{ability.label}}</label>
-                    <input type="text" name = "data.abilities.{{key}}.value" value="{{ability.value}}" data-dtype="Number">
-                </div>
+            <li class="ability" data-ability="{{id}}">
+              <h4 class="ability-name box-title rollable">{{ability.label}}</h4>
+              <input class="ability-score" name="data.abilities.{{id}}.value" type="number" value="{{ability.value}}" placeholder="10"/>
+          </li>
             {{/each}}
         </div>
       </div>

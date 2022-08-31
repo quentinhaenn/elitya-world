@@ -16,7 +16,6 @@ export class ElityaActor extends Actor {
 
         this._prepareCharacterData(actorData);
         this._prepareNpcData(actorData);
-        this._prepareMonsterData(actorData);
     }
 
     _prepareCharacterData(actorData){
@@ -24,9 +23,6 @@ export class ElityaActor extends Actor {
 
         const data = actorData.data;
 
-        for (let [key, ability] of Object.entries(data.abilities)) {
-            ability.mod = "novice";
-        }
     }
 
     _prepareNpcData(actorData){
@@ -38,21 +34,12 @@ export class ElityaActor extends Actor {
     }
 
 
-    _prepareMonsterData(actorData){
-        if (actorData.type !== 'monster') return ;
-
-        const data = actorData.data;
-
-        data.xp = "experience"
-    }
-
 
     getRollData() {
         const data = super.getRollData();
 
         this._getCharacterRollData(data);
         this._getNpcRollData(data);
-        this._getMonsterRollData(data);
 
         return data;
     }
@@ -75,11 +62,5 @@ export class ElityaActor extends Actor {
     _getNpcRollData(data) {
         if (this.data.type !== 'npc') return;
 
-    }
-
-    _getMonsterRollData(data){
-        if(this.data.type !== 'monster') return;
-
-        
     }
 }

@@ -4,10 +4,10 @@ export default class ElityaActorSheet extends ActorSheet {
 
     static get defaultOptions() {
         return foundry.utils.mergeObject(super.defaultOptions, {
-            classes: ["elityaworld", "sheet", "actor"],
+            classes: ["elityaworld", "sheet", "actor", "character"],
             width: 600,
             height: 600,
-            tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "features" }]
+            tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }]
         });
     }
 
@@ -38,6 +38,7 @@ export default class ElityaActorSheet extends ActorSheet {
 
         context.rollData = context.actor.getRollData();
 
+        console.log(context)
         return context
     }
 

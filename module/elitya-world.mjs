@@ -3,6 +3,7 @@ import { ElityaActor } from "./documents/actor.mjs";
 import ElityaItem from "./documents/item.mjs";
 import ElityaActorSheet from "./sheets/elityaActorSheet.mjs";
 import { ELITYAWORLD } from "./helpers/config.mjs";
+import { preloadHandlebarsTemplates } from "./helpers/template.mjs"
 
 Hooks.once("init",function() {
     console.log("Elitya | initialisation du systeme");
@@ -24,6 +25,7 @@ Hooks.once("init",function() {
     Actors.unregisterSheet("core", ActorSheet);
     Actors.registerSheet("elitya-world", ElityaActorSheet, {makeDefault : true});
 
+    preloadHandlebarsTemplates();
 });
 
 Hooks.once("ready", function() {
