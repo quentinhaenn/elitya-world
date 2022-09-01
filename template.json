@@ -172,8 +172,7 @@
         "types":["weapon","armor","spell", "consumable", "item"],
         "templates":{
             "itemDescription" :{
-                "value":"",
-                "chat":""
+                "description":""
             },
             "physicalItem" : {
                 "weight": 0,
@@ -182,7 +181,7 @@
                 "quantity": ""
             },
             "equipement" :{
-                "health" : {
+                "usury" : {
                     "value" : 20,
                     "min" : 0,
                     "max" : 20

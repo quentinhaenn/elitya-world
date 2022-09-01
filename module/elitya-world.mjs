@@ -18,7 +18,7 @@ Hooks.once("init",function() {
     console.log("ELitya | configuration des classes et fiches");
 
     CONFIG.Actor.documentClass = ElityaActor;
-    CONFIG.Item.documentClass = ElityaItem;
+    //CONFIG.Item.documentClass = ElityaItem;
     
     Items.unregisterSheet("core", ItemSheet);
     Items.registerSheet("elitya-world", ElityaItemSheet, {makeDefault: true});

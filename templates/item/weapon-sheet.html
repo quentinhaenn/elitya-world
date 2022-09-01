@@ -1,13 +1,39 @@
 <form class="{{cssClass}}" autocomplete="off">
-    <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="128" width="128"/>
-    <h1><input name="name" type="text" value={{item.name}}/> </h1>
-    <label>Description
-        <input type="text" name="data.description" value="{{data.description}}"/>
-    </label>
-    <label>Damages
-        <input type="text" name="data.damages" value="{{data.damages}}"/>
-    </label>
-    <label>Health
-        <input type="text" name="data.health" value="{{data.health}}" />
-    </label>
+    <header class="sheet-header">
+        <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
+        <h1><input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'ELITYAWORLD.NewItem' }}"/></h1>
+    </header>
+    <div>
+        <table>
+            <tr>
+                <th>{{ localize "ELITYAWORLD.Ability"}}</th>
+                <th>{{ localize "ELITYAWORLD.WeaponType"}}</th>
+                <th>{{ localize "ELITYAWORLD.Quality"}}</th>
+                <th>{{ localize "ELITYAWORLD.Usury"}}</th>
+                <th>{{ localize "ELITYAWORLD.Damages"}}</th>
+            </tr>
+            <tr>
+                <td>
+                   <select name="system.ability">
+                        {{selectOptions config.abilities selected=system.ability localize=true}}
+                   </select> 
+                </td>
+                <td>
+                    <select name="system.weaponType">
+                        {{selectOptions config.weaponTypes selected=system.weaponType localize=true}}
+                    </select>
+                </td>
+                <td>
+                    <input name="system.quality" type="text" value="{{system.quality}}">
+                </td>
+                <td>
+                    <input name="system.usury.value" type="text" value="{{system.usury.value}}" data-dtype="Number">
+                </td>
+                <td>
+                    <input name="system.formula" type="text" value="{{system.formula}}">
+                </td>
+            </tr>
+        </table>
+        {{editor system.itemDescription.description target="system.itemDescription.description" button=true owner=owner editable=editable}}
+    </div>
 </form>
