@@ -20,7 +20,7 @@
         "module/elitya-world.mjs"
     ],
     "styles": [
-      
+      "styles/elityaworld.css"
     ],
     "packs":[],
   "languages": [

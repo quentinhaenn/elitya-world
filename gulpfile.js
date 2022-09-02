@@ -4,20 +4,16 @@ var less = require('gulp-less');
 
 gulp.task('less', function(cb) {
   gulp
-    .src('*.less')
+    .src('styles/less/elityaworld.less')
     .pipe(less())
-    .pipe(
-      gulp.dest(function(f) {
-        return f.base;
-      })
-    );
+    .pipe(gulp.dest("./styles"));
   cb();
 });
 
 gulp.task(
   'default',
   gulp.series('less', function(cb) {
-    gulp.watch('*.less', gulp.series('less'));
+    gulp.watch('styles/less/*.less', gulp.series('less'));
     cb();
   })
 );

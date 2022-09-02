@@ -1,5 +1,14 @@
 export default class ElityaItemSheet extends ItemSheet {
 
+
+    static get defaultOptions() {
+        return mergeObject(super.defaultOptions , {
+            width: 530,
+            height: 340,
+            classes: ["elityaworld", "sheet", "item"]
+        });
+    }
+
     get template() {
         console.log("Elitya | Getting HTML item template");
         return `systems/elitya-world/templates/item/${this.item.type}-sheet.html`
