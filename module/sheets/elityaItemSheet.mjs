@@ -11,7 +11,7 @@ export default class ElityaItemSheet extends ItemSheet {
 
     get template() {
         console.log("Elitya | Getting HTML item template");
-        return `systems/elitya-world/templates/item/${this.item.type}-sheet.html`
+        return `systems/elitya-world/templates/item/${this.item.type}-sheet.hbs`
     }
 
     async getData(options) {

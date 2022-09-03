@@ -1,0 +1,13 @@
+<section>
+    <div class="ability-block">
+        {{log system}}
+        {{#each system.abilities as |ability name|}}
+            <label class="ability-name">
+                <h3>{{ ability.label }}</h3>
+            </label>
+            <div class="ability-value">
+                <input type="number" name="system.abilities.{{name}}.value" value="system.abilities.{{name}}.value" placeholder="30" title="{{localize ability.label }}" data-dtype="Number" >
+            </div>
+        {{/each}}
+    </div>
+</section>

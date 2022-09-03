@@ -34,9 +34,7 @@
                     }
                 },
                 "details" : {
-                    "biography" :{
-                        "value" : ""
-                    }
+                    "biography" : ""
                 },
                 "description":""
             },
@@ -140,7 +138,7 @@
         "character" : {
             "templates": ["base","person"],
             "attributes" : {
-                "level": {"value": 1},
+                "level": 1,
                 "experience":{"value": 0, "next": 100},
                 "mentalHealth" : {
                     "value":0,

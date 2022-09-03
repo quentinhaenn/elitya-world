@@ -5,7 +5,7 @@ export const ELITYAWORLD = {};
  * @type {Object}
  */
  ELITYAWORLD.abilities = {
-  "phy": "ELITYAWORLD.AbilityStr",
+  "phy": "ELITYAWORLD.AbilityPhy",
   "dex": "ELITYAWORLD.AbilityDex",
   "int": "ELITYAWORLD.AbilityInt",
   "cha": "ELITYAWORLD.AbilityCha",
@@ -14,7 +14,7 @@ export const ELITYAWORLD = {};
 };
 
 ELITYAWORLD.abilityAbbreviations = {
-  "phy": "ELITYAWORLD.AbilityStrAbbr",
+  "phy": "ELITYAWORLD.AbilityPhyAbbr",
   "dex": "ELITYAWORLD.AbilityDexAbbr",
   "int": "ELITYAWORLD.AbilityIntAbbr",
   "cha": "ELITYAWORLD.AbilityChaAbbr",

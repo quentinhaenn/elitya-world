@@ -7,12 +7,11 @@
     return loadTemplates([
   
       // Shared Partials
-      "systems/elitya-world/templates/actor/parts/actor-effects.html",
+      "systems/elitya-world/templates/actor/parts/actor-effects.hbs",
+      "systems/elitya-world/templates/actor/parts/actor-ability-block.hbs"
   
       // Actor Sheet Partials
-      "systems/elitya-world/templates/actor/parts/actor-traits.html",
-      "systems/elitya-world/templates/actor/parts/actor-inventory.html",
-      "systems/elitya-world/templates/actor/parts/actor-spellbook.html",
+      
   
       // Item Sheet Partials
       //"systems/elitya-world/templates/itemsparts/item-action.html",

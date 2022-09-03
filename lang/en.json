@@ -2,7 +2,7 @@
     "ELITYAWORLD" : {
         "ActorName": "Actor's Name",
         "NewItem": "New {itemType}",
-        "AbilityStr":"Strength",
+        "AbilityPhy":"Physical",
         "AbilityDex": "Dexterity",
         "AbilityCon": "Constitution",
         "AbilityInt": "Intelligence",
@@ -15,10 +15,13 @@
         "Age" : "Age",
         "Height": "Height",
         "HitPoints": "HP",
+        "HitPointsCurrent": "Current HP",
         "HitPointMax": "HP Max",
         "Mana": "Mana",
+        "ManaCurrent":"Current Mana",
         "ManaMax": "Mana Max",
         "Endurance": "Endurance",
+        "EnduranceCurrent" : "Current Endurance",
         "EnduranceMax": "Endurance Max",
         "Attributes": "Attributes",
         "Inventory": "Inventory",
@@ -55,6 +58,7 @@
         "Axe" : "Axe",
         "LongSword" : "Long Sword",
         "Usury" : "Usury",
-        "Ability" : "Ability"
+        "Ability" : "Ability",
+        "Spells": "Spells"
     }
 }
