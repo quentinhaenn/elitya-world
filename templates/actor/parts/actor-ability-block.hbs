@@ -1,11 +1,8 @@
-
-<div class="ability-block">
-    {{#each system.abilities as |ability name|}}
-        <label class="ability-name">
+{{#each system.abilities as |ability name|}}
+    <div class="ability">
+        <label class="ability-name box-title rollable">
             <h3>{{ability.label}}</h3>
         </label>
-        <div class="ability-value">
-            {{numberInput ability.value name=(concat "system.abilities." name ".value") class="ability-score" placeholder="10"}}
-        </div>
-    {{/each}}
-</div>
+            {{numberInput ability.value name=(concat "system.abilities." name ".value") class="ability-value" placeholder="10"}}
+    </div>
+{{/each}}

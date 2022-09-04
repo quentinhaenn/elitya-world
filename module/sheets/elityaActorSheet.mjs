@@ -4,7 +4,7 @@ export default class ElityaActorSheet extends ActorSheet {
 
     static get defaultOptions() {
         return foundry.utils.mergeObject(super.defaultOptions, {
-            classes: ["elityaworld", "sheet"],
+            classes: ["elityaworld", "sheet", "actor","character"],
             width: 600,
             height: 600,
             tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }]

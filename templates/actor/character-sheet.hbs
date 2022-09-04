@@ -37,27 +37,27 @@
             {{!--Header attributes --}}
             <ul class="attributes flexrow">
                 <li class="attribute health">
-                    <h4 class="attributes-name box-title">{{localize 'ELITYAWORLD.HitPoints'}}</h4>
+                    <h4 class="attribute-name box-title">{{localize 'ELITYAWORLD.HitPoints'}}</h4>
                     <div class="attribute-value multiple">
-                        <input type="number" name="system.attributes.hp.value" value="{{system.attributes.hp.value}}" placeholder="100" title="{{localize "ELITYAWORLD.HitPointsCurrent" }}" data-dtype='Number'>
+                        <input type="number" name="system.attributes.hp.value" value="{{system.attributes.hp.value}}" placeholder="100" title="{{localize "ELITYAWORLD.HitPointsCurrent" }}" step="any">
                         <span class="sep">/</span>
-                        <input type="number" name="system.attributes.hp.max" value="{{system.attributes.hp.max}}" placeholder="100" title="{{localize "ELITYAWORLD.HitPointsMax"}}">
+                        <input type="number" name="system.attributes.hp.max" value="{{system.attributes.hp.max}}" placeholder="100" title="{{localize "ELITYAWORLD.HitPointsMax"}}" step="any">
                     </div>
                 </li>
                 <li class="attribute mana">
-                    <h4 class="attribute-name box-title">{{localize "ELITYAWORLD.Mana"}}</h4>
+                    <h4 class="attribute-name box-title">{{localize 'ELITYAWORLD.Mana'}}</h4>
                     <div class="attribute-value multiple">
-                        <input type="number" name="system.attributes.mana.value" value="{{system.attributes.mana.value}}" placeholder="100" title="{{localize "ELITYAWORLD.ManaCurrent" }}" >
+                        <input type="number" name="system.attributes.mana.value" value="{{system.attributes.mana.value}}" placeholder="100" title="{{localize "ELITYAWORLD.ManaCurrent" }}" step="any">
                         <span class="sep">/</span>
-                        <input type="numer" name="system.attributes.mana.max" value="{{system.attributes.mana.max}}" placeholder="100" title="{{localize "ELITYAWORLD.ManaMax"}}" >
+                        <input type="number" name="system.attributes.mana.max" value="{{system.attributes.mana.max}}" placeholder="100" title="{{localize "ELITYAWORLD.ManaMax"}}" step="any">
                     </div>
                 </li>
                 <li class="attribute endurance">
-                    <h4 class="attribute-name box-title">{{localize "ELITYAWORLD.Endurance"}}</h4>
+                    <h4 class="attribute-name box-title">{{localize 'ELITYAWORLD.Endurance'}}</h4>
                     <div class="attribute-value multiple">
-                        <input type="number" name="system.attributes.endurance.value" value="{{system.attributes.endurance.value}}" title="{{localize "ELITYAWORLD.EnduranceCurrent" }}" placeholder="100">
+                        <input type="number" name="system.attributes.endurance.value" value="{{system.attributes.endurance.value}}" placeholder="100" title="{{localize "ELITYAWORLD.EnduranceCurrent" }}" step="any">
                         <span class="sep">/</span>
-                        <input type="numer" name="system.attributes.endurance.max" value="{{system.attributes.endurance.max}}" title="{{localize "ELITYAWORLD.EnduranceMax"}}" placeholder="100">
+                        <input type="number" name="system.attributes.endurance.max" value="{{system.attributes.endurance.max}}" placeholder="100" title="{{localize "ELITYAWORLD.EnduranceMax"}}" step="any">
                     </div>
                 </li>
             </ul>

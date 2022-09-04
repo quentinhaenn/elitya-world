@@ -1,0 +1,51 @@
+@import "./variables.less";
+
+.elityaworld.sheet.actor.character {
+    min-width: 720px;
+    min-height: 680px;
+
+    .sheet-header {
+        img.profile {
+            flex: 0 0 160px;
+            max-width: 160px;
+      height: 160px;
+    }
+
+    // Character Level
+    .charlevel {
+      flex: 0 0 20px;
+      height: 20px;
+      font-size: 18px;
+      color: @colorTan;
+      white-space: nowrap;
+    }
+
+    // Experience Tracking
+    
+    .experience {
+        flex: 0 0 32px;
+        margin-bottom: -5px;
+        align-items: center;
+        font-size: 18px;
+        span.xp-next {
+          color: @colorTan;
+          flex: none;
+          margin-left: 3px;
+        }
+      }
+    }
+
+    ul.skills-list {
+        flex: 0 0 212px;
+    
+        li.skill {
+          padding: 3px;
+          h4 {
+            flex: 1px;
+            margin: 0;
+            font-size: 13px;
+          }
+        }
+      }
+
+}

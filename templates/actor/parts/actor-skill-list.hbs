@@ -1,15 +1,13 @@
-<div class="skill-list">
-    <ul class="skills-list">
-        {{#each config.skills as |obj s|}}
-            {{#with (lookup ../system.skills s) as |skill|}}
-                <li class="skill flexrow" data-skill="{{s}}">
-                    <div class="skill-name-controls">
-                      <h4 class="skill-name rollable">{{localize obj.label}}</h4>
-                    </div>
-                    <input type="text" name="system.skills.{{s}}.value" value="{{skill.value}}" data-dtype="Number"/>
-                    <span class="skill-ability">{{skill.ability}}</span>
-                </li>
-            {{/with}}
-        {{/each}}
-    </ul>
-</div>
+<ul class="skills-list">
+    {{#each config.skills as |obj s|}}
+        {{#with (lookup ../system.skills s) as |skill|}}
+            <li class="skill flexrow" data-skill="{{s}}">
+                <div class="skill-name-controls">
+                  <h4 class="skill-name rollable">{{localize obj.label}}</h4>
+                </div>
+                <input type="text" name="system.skills.{{s}}.value" value="{{skill.value}}" data-dtype="Number"/>
+                <span class="skill-ability">{{skill.ability}}</span>
+            </li>
+        {{/with}}
+    {{/each}}
+</ul>
