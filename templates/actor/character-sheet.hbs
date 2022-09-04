@@ -3,7 +3,7 @@
         <img class="profile-img" src="{{actor.img}}" title="{{actor.name}}" data-edit="img">
         <section class="header-details flexrow">
             <h1 class="charname">
-                <input class="name" type="text" value="{{actor.name}}" placeholder="{{localize ELITYAWORLD.ActorName}}"/>
+                <input class="name" type="text" value="{{actor.name}}" placeholder="{{localize "ELITYAWORLD.ActorName"}}"/>
             </h1>
 
             <aside class="header-exp flexcol">
@@ -21,43 +21,43 @@
             {{!-- character summary --}}
             <ul class="summary flexrow">
                 <li>
-                    <input type="text" name="system.details.race" value="{{system.details.race}}" placeholder="{{localize ELITYAWORLD.Race}}"/>
+                    <input type="text" name="system.details.race" value="{{system.details.race}}" placeholder="{{localize "ELITYAWORLD.Race"}}"/>
                 </li>
                 <li>
-                    <input type="text" name="system.details.age" value="{{system.details.age}}" placeholder="{{localize ELITYAWORLD.Age}}" />
+                    <input type="text" name="system.details.age" value="{{system.details.age}}" placeholder="{{localize "ELITYAWORLD.Age"}}" />
                 </li>
                 <li>
-                   <input type="text" name="system.details.sex" value="{{system.details.sex}}" placeholder="{{localize ELITYAWORLD.Sex}}"/> 
+                   <input type="text" name="system.details.sex" value="{{system.details.sex}}" placeholder="{{localize "ELITYAWORLD.Sex"}}"/> 
                 </li>
                 <li>
-                    <input type="text" name="system.details.height" value="{{system.details.height}}" placeholder="{{ localize ELITYAWORLD.Height}}">
+                    <input type="text" name="system.details.height" value="{{system.details.height}}" placeholder="{{ localize "ELITYAWORLD.Height"}}">
                 </li>
             </ul>
 
             {{!--Header attributes --}}
             <ul class="attributes flexrow">
-                <li class="attributes health">
-                    <h4 class="attributes-name box-title">{{localize ELITYAWORLD.HitPoints}}</h4>
-                    <div class="attributes-value multiple">
-                        <input type="number" name="system.attributes.hp.value" value="{{system.attributes.hp.value}}" placeholder="10" title="{{localize ELITYAWORLD.HitPointsCurrent }}" step="any">
+                <li class="attribute health">
+                    <h4 class="attributes-name box-title">{{localize 'ELITYAWORLD.HitPoints'}}</h4>
+                    <div class="attribute-value multiple">
+                        <input type="number" name="system.attributes.hp.value" value="{{system.attributes.hp.value}}" placeholder="100" title="{{localize "ELITYAWORLD.HitPointsCurrent" }}" data-dtype='Number'>
                         <span class="sep">/</span>
-                        <input type="numer" name="system.attributes.hp.max" value="{{system.attibutes.hp.max}}" placeholder="10" title="{{localize ELITYAWORLD.HitPointsMax}}" step="any">
+                        <input type="number" name="system.attributes.hp.max" value="{{system.attributes.hp.max}}" placeholder="100" title="{{localize "ELITYAWORLD.HitPointsMax"}}">
                     </div>
                 </li>
-                <li class="attributes mana">
-                    <h4 class="attributes-name box-title">{{localize ELITYAWORLD.Mana}}</h4>
-                    <div class="attributes-value multiple">
-                        <input type="number" name="system.attributes.mana.value" value="{{system.attributes.mana.value}}" placeholder="10" title="{{localize ELITYAWORLD.ManaCurrent }}" step="any">
+                <li class="attribute mana">
+                    <h4 class="attribute-name box-title">{{localize "ELITYAWORLD.Mana"}}</h4>
+                    <div class="attribute-value multiple">
+                        <input type="number" name="system.attributes.mana.value" value="{{system.attributes.mana.value}}" placeholder="100" title="{{localize "ELITYAWORLD.ManaCurrent" }}" >
                         <span class="sep">/</span>
-                        <input type="numer" name="system.attributes.mana.max" value="{{system.attibutes.mana.max}}" placeholder="10" title="{{localize ELITYAWORLD.ManaMax}}" step="any">
+                        <input type="numer" name="system.attributes.mana.max" value="{{system.attributes.mana.max}}" placeholder="100" title="{{localize "ELITYAWORLD.ManaMax"}}" >
                     </div>
                 </li>
-                <li class="attributes endurance">
-                    <h4 class="attributes-name box-title">{{localize ELITYAWORLD.Endurance}}</h4>
-                    <div class="attributes-value multiple">
-                        <input type="number" name="system.attributes.endurance.value" value="{{system.attributes.endurance.value}}" placeholder="10" title="{{localize ELITYAWORLD.EnduranceCurrent }}" step="any">
+                <li class="attribute endurance">
+                    <h4 class="attribute-name box-title">{{localize "ELITYAWORLD.Endurance"}}</h4>
+                    <div class="attribute-value multiple">
+                        <input type="number" name="system.attributes.endurance.value" value="{{system.attributes.endurance.value}}" title="{{localize "ELITYAWORLD.EnduranceCurrent" }}" placeholder="100">
                         <span class="sep">/</span>
-                        <input type="numer" name="system.attributes.endurance.max" value="{{system.attibutes.endurance.max}}" placeholder="10" title="{{localize ELITYAWORLD.EnduranceMax}}" step="any">
+                        <input type="numer" name="system.attributes.endurance.max" value="{{system.attributes.endurance.max}}" title="{{localize "ELITYAWORLD.EnduranceMax"}}" placeholder="100">
                     </div>
                 </li>
             </ul>
@@ -67,15 +67,38 @@
     {{!--Character sheet navigation--}}
 
     <nav class="sheet-navigation tabs" data-group="primary">
-        <a class="item active" data-tab="attributes">{{localize ELITYAWORLD.attributes}}</a>
-        <a class="item" data-tab="inventory">{{localize ELITYAWORLD.Inventory}}</a>
-        <a class="item" data-tab="spells">{{localize ELITYAWORLD.Spells}}</a>
-        <a class="item" data-tab="biography">{{localize ELITYAWORLD.Biography}}</a>
+        <a class="item active" data-tab="attributes">{{localize "ELITYAWORLD.Attributes"}}</a>
+        <a class="item" data-tab="inventory">{{localize "ELITYAWORLD.Inventory"}}</a>
+        <a class="item" data-tab="spells">{{localize "ELITYAWORLD.Spells"}}</a>
+        <a class="item" data-tab="biography">{{localize "ELITYAWORLD.Biography"}}</a>
     </nav>
 
     <section class="sheet-body">
-        <div class="abilities-block">
-            {{> "systems/elitya-world/templates/actor/parts/actor-ability-block.hbs"}}
+        <div class="tabs attributes flexrow" data-group="primary" data-tab="attributes">
+            <div class="abilities-block">
+                {{> "systems/elitya-world/templates/actor/parts/actor-ability-block.hbs"}}
+            </div>
+            <div class="skill-block">
+                {{> "systems/elitya-world/templates/actor/parts/actor-skill-list.hbs"}}
+            </div>
+            <section class="center-pane flexcol">
+                <div class="attributes mental">
+                    <h4 class="attributes-name box-title" >{{localize "ELITYAWORLD.MentalHealth"}}</h4>
+                    {{numberInput system.attributes.mentalHealth.value name="system.attributes.mentalHealth.value" placeholder="0"}}
+                </div>
+                <div class="traits special-traits">
+                    <label>{{localize "ELITYAWORLD.SpecialTraits"}}</label>
+                    <textarea name="system.traits.special.custom">{{system.traits.special.custom}}</textarea>
+                </div>
+                <div class="traits languages">
+                    <label>{{localize "ELITYAWORLD.Languages"}}</label>
+                    <textarea name="system.traits.languages.custom">{{system.traits.languages.custom}}</textarea>
+                </div>
+                <div class="traits religion">
+                    <label>{{localize "ELITYAWORLD.Religion"}}</label>
+                    <textarea name="system.traits.religion">{{system.traits.religion}}</textarea>
+                </div>
+            </section>
         </div>
     </section>
 

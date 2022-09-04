@@ -16,13 +16,14 @@
         "Height": "Height",
         "HitPoints": "HP",
         "HitPointsCurrent": "Current HP",
-        "HitPointMax": "HP Max",
+        "HitPointsMax": "HP Max",
         "Mana": "Mana",
         "ManaCurrent":"Current Mana",
         "ManaMax": "Mana Max",
         "Endurance": "Endurance",
         "EnduranceCurrent" : "Current Endurance",
         "EnduranceMax": "Endurance Max",
+        "MentalHealth" : "Mental Health",
         "Attributes": "Attributes",
         "Inventory": "Inventory",
         "Effects" : "Effects",
@@ -59,6 +60,9 @@
         "LongSword" : "Long Sword",
         "Usury" : "Usury",
         "Ability" : "Ability",
-        "Spells": "Spells"
+        "Spells": "Spells",
+        "SpecialTraits" : "Special Traits",
+        "Languages": "Languages",
+        "Religion" : "Religion"
     }
 }

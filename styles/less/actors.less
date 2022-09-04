@@ -1,0 +1,71 @@
+@import "./variables.less";
+
+@actorNameHeight: 60px;
+
+.elityaworld.sheet {
+    .sheet-header {
+        img.profile-img {
+            flex: 0 0 160px;
+            max-width: 160px;
+            height: 160px;
+        }
+
+        h1.charname {
+            flex: 1;
+            height: @actorNameHeight;
+            padding: 0;
+            input {
+                height: @actorNameHeight - 20px;
+                margin: 10px 0;
+            }
+        }
+
+        .header-exp {
+            flex: 0 0 150px;
+            margin-right: 3px;
+            height: @actorNameHeight;
+            justify-content: flex-end;
+            text-align: right;
+        }
+
+        .summary {
+            height: 30px;
+            border-bottom: @borderGroove;
+            font-size: 18px;
+            input, span {
+                display: block;
+                height: 24px;
+                line-height: 24px;
+            }
+            span {
+                margin-inline-start: 4px;
+                border-block-start: 1px solid transparent;
+            }
+        }
+
+        .attributes {
+            flex: 0 0 100%;
+            margin: 0;
+
+            .attribute {
+                height: 70px;
+                margin: 0;
+                border: none;
+                border-right: @borderGroove;
+                border-radius: 0;
+                &:last-child {
+                    border-right: none;
+                }
+
+                .attribute-name {
+                    position: relative;
+                }
+
+                .attribute-value {
+                    height: 30px;
+                    line-height: 30px;
+                }
+            }
+        }
+    }
+}

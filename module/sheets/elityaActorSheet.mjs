@@ -12,7 +12,7 @@ export default class ElityaActorSheet extends ActorSheet {
     }
 
     get template() {
-        return `systems/elitya-world/templates/actor/${this.actor.data.type}-sheet.hbs`
+        return `systems/elitya-world/templates/actor/${this.actor.type}-sheet.hbs`
     }
 
 
@@ -25,25 +25,18 @@ export default class ElityaActorSheet extends ActorSheet {
         
         const actor = context.actor;
         const source = actor.toObject();
+
+        for (let [k,v] of Object.entries(actor.system.abilities)){
+            v.label = game.i18n.localize(context.config.abilities[k]) ?? k;
+        }
+
         foundry.utils.mergeObject(context, {
             source: source.system,
             system: actor.system,
             labels: actor.labels
         })
         console.log(actor);
-        switch(actor.type) {
-            case 'character':
-                this._prepareItems(context);
-                this._prepareCharacterData(context);
-                break;
-            case 'npc':
-                this._prepareItems(context);
-                break;
-        }
-
-        context.rollData = context.actor.getRollData();
-
-        console.log(context)
+        
         return context
     }
 

@@ -8,8 +8,8 @@
   
       // Shared Partials
       "systems/elitya-world/templates/actor/parts/actor-effects.hbs",
-      "systems/elitya-world/templates/actor/parts/actor-ability-block.hbs"
-  
+      "systems/elitya-world/templates/actor/parts/actor-ability-block.hbs",
+      "systems/elitya-world/templates/actor/parts/actor-skill-list.hbs"
       // Actor Sheet Partials
       
   

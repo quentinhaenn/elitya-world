@@ -118,21 +118,22 @@
                         "value":0,
                         "ability":"fur"
                     }
-                }
-            },
-            "traits":{
-                "languages": {
-                    "value":[],
-                    "custom": ""
                 },
-                "special":{
+                "traits":{
+                    "languages": {
+                        "value":[],
+                        "custom": ""
+                    },
+                    "special":{
+                        "value":[],
+                        "custom":""
+                    },
+                    "religion":""
+                },
+                "spells":{
                     "value":[],
                     "custom":""
                 }
-            },
-            "spells":{
-                "value":[],
-                "custom":""
             }
         },
         "character" : {
