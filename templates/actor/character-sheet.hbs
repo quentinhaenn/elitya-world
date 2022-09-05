@@ -8,7 +8,7 @@
 
             <aside class="header-exp flexcol">
                 <div class="charlevel" title="level">
-                    <label>{{localize ELITYAWORLD.Level}} {{system.attributes.level}}</label>
+                    <label>{{localize "ELITYAWORLD.Level"}} {{system.attributes.level}}</label>
                 </div>
 
                 <div class="experience flexrow">
@@ -74,7 +74,7 @@
     </nav>
 
     <section class="sheet-body">
-        <div class="tabs attributes flexrow" data-group="primary" data-tab="attributes">
+        <div class="tab attributes flexrow" data-group="primary" data-tab="attributes">
             <div class="abilities-block">
                 {{> "systems/elitya-world/templates/actor/parts/actor-ability-block.hbs"}}
             </div>
@@ -82,9 +82,9 @@
                 {{> "systems/elitya-world/templates/actor/parts/actor-skill-list.hbs"}}
             </div>
             <section class="center-pane flexcol">
-                <div class="attributes mental">
-                    <h4 class="attributes-name box-title" >{{localize "ELITYAWORLD.MentalHealth"}}</h4>
-                    {{numberInput system.attributes.mentalHealth.value name="system.attributes.mentalHealth.value" placeholder="0"}}
+                <div class="attribute mental">
+                    <h4 class="attribute-name box-title" >{{localize "ELITYAWORLD.MentalHealth"}}</h4>
+                    {{numberInput system.attributes.mentalHealth.value name="system.attributes.mentalHealth.value" placeholder="0" class="attribute-mental-value"}}
                 </div>
                 <div class="traits special-traits">
                     <label>{{localize "ELITYAWORLD.SpecialTraits"}}</label>
@@ -99,6 +99,31 @@
                     <textarea name="system.traits.religion">{{system.traits.religion}}</textarea>
                 </div>
             </section>
+        </div>
+
+        <div class="tab inventory flexcol" data-group="primary" data-tab="inventory">
+            bloublou
+        </div>
+
+        <div class="tab spells flexcol" data-group="primary" data-tab="spells">
+            bloubli
+        </div>
+
+        <div class="tab flexrow" data-group="primary" data-tab="biography">
+            <div class="characteristics flexcol">
+                <label>{{ localize "ELITYAWORLD.Appearance" }}</label>
+                <textarea name="system.details.appearance">{{system.details.appearance}}</textarea>
+                <label>{{ localize "ELITYAWORLD.Personality" }}</label>
+                <textarea name="system.details.personality">{{system.details.personality}}</textarea>
+                <label>{{ localize "ELITYAWORLD.Psychology" }}</label>
+                <textarea name="system.details.psychology">{{system.details.psychology}}</textarea>
+                <label>{{ localize "ELITYAWORLD.Phobia" }}</label>
+                <textarea name="system.details.phobia">{{system.details.phobia}}</textarea>
+            </div>
+            <div class="biography">
+                {{editor system.details.biography target="system.details.biography" button=true editable=editable
+                owner=owner}}
+            </div>
         </div>
     </section>
 

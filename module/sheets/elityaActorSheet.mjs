@@ -7,7 +7,7 @@ export default class ElityaActorSheet extends ActorSheet {
             classes: ["elityaworld", "sheet", "actor","character"],
             width: 600,
             height: 600,
-            tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }]
+            tabs: [{ navSelector: ".tabs", contentSelector: ".sheet-body", initial: "attributes" }]
         });
     }
 
@@ -87,7 +87,6 @@ export default class ElityaActorSheet extends ActorSheet {
 
 
     activateListeners(html) {
-        
         super.activateListeners(html);
 
     }

@@ -14,6 +14,7 @@
         "Race":"Race",
         "Age" : "Age",
         "Height": "Height",
+        "Sex": "Sex",
         "HitPoints": "HP",
         "HitPointsCurrent": "Current HP",
         "HitPointsMax": "HP Max",
@@ -63,6 +64,10 @@
         "Spells": "Spells",
         "SpecialTraits" : "Special Traits",
         "Languages": "Languages",
-        "Religion" : "Religion"
+        "Religion" : "Religion",
+        "Appearance" : "Appearance",
+        "Personality" : "Personality",
+        "Psychology" : "Psychology",
+        "Phobia" : "Phobia"
     }
 }

@@ -80,7 +80,7 @@
         white-space: nowrap;
     }
 
-    .tabs.attributes {
+    .tab.attributes {
         overflow: hidden;
         align-items: flex-start;
     }
@@ -118,10 +118,11 @@
                 }
             }
         }
+        
     }
 
 
-    .ability-block {
+    .abilities-block {
         flex: 0 0 100px;
         align-content: flex-start;
         list-style: none;
@@ -152,36 +153,39 @@
         }
     }
 
-    .ul.skills-list {
-        flex: 0 0 180px;
-        list-style: none;
-        margin: 0 5px 0;
-        padding: 0;
-        border : @borderGroove;
-        border-radius: 3px;
-
-        li.skill {
-            height: 24px;
-            padding: 3px 2px;
-
-            &:nth-child(even) {
-                background: rgba(0, 0, 0, 0.05);
-            }
-
-            h4 {
-                flex: 1px;
-                margin: 0;
-                font-size: 11px;
-                line-height: 18px;
-            }
-
-            .skill-name-controls {
-                position: relative;
-            }
-
-            .skill-ability {
-                flex: 0 0 26px;
-                text-transform: capitalize;
+    .skill-block {
+        ul.skills-list {
+            flex: 0 0 180px;
+            list-style: none;
+            margin: 0 5px 0;
+            padding: 0;
+            border : @borderGroove;
+            border-radius: 3px;
+    
+            li.skill {
+                height: 24px;
+                padding: 3px 2px;
+    
+                &:nth-child(even) {
+                    background: rgba(0, 0, 0, 0.05);
+                }
+    
+                h4 {
+                    flex: 1px;
+                    margin: 0;
+                    font-size: 11px;
+                    line-height: 18px;
+                }
+    
+                .skill-name-controls {
+                    position: relative;
+                }
+    
+                .skill-ability {
+                    flex: 0 0 26px;
+                    text-transform: capitalize;
+                }
+                
             }
         }
     }
@@ -191,6 +195,27 @@
         padding: 0 5px 0 3px;
         overflow-y: auto;
         scrollbar-width: thin;
+    }
+
+    .attribute.mental {
+        height: 60px;
+        margin: 0 5px 0 0;
+        border: @borderGroove;
+        border-radius: 4px;
+        text-align: center;
+
+        .attribute-mental-value {
+            justify-content: center;
+            align-items: center;
+            height: 28px;
+            line-height: 28px;
+            .modesto();
+
+            > * {
+                font-weight: 400;
+                font-size: 24px;
+            }
+        }
     }
 
     .traits {
@@ -204,6 +229,18 @@
             margin: 0 10px 0 0;
             font-weight: bold;
         }
+
+        textarea {
+            font-family: "Signika", serif;
+            height: 100px;
+            font-size: 13px;
+            border: @borderGroove;
+            resize: none;
+        }
     }
 
+    .tab.inventory,
+    .tab.spellbook {
+        overflow-y: hidden;
+    }
 }

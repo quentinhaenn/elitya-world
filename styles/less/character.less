@@ -48,4 +48,34 @@
         }
       }
 
+      .characteristics {
+        flex: 0 0 180px;
+        height: 100%;
+        padding: 0 3px 3px;
+        label {
+          flex: 0 0 20px;
+          .modesto();
+          font-size: 20px;
+          font-weight: normal;
+          line-height: 20px;
+          text-align: center;
+          color: @colorLabel;
+        }
+        textarea {
+          font-family: "Signika", serif;
+          font-size: 13px;
+          border: @borderGroove;
+          resize: none;
+        }
+      }
+    
+      .biography {
+        max-width: calc(100% - 180px);
+
+        .editor {
+          height: 100%;
+          padding: 0 5px 5px;
+          border: @borderGroove;
+        }
+      }
 }
