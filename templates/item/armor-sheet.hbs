@@ -6,22 +6,19 @@
     <div class="sheet-content">
         <table>
             <tr>
-                <th>{{ localize "ELITYAWORLD.Ability"}}</th>
-                <th>{{ localize "ELITYAWORLD.WeaponType"}}</th>
+                <th>{{ localize "ELITYAWORLD.ArmorType"}}</th>
+                <th>{{ localize "ELITYAWORLD.ArmorValue"}}</th>
                 <th>{{ localize "ELITYAWORLD.Quality"}}</th>
                 <th>{{ localize "ELITYAWORLD.Usury"}}</th>
-                <th>{{ localize "ELITYAWORLD.Damages"}}</th>
             </tr>
             <tr>
                 <td>
-                   <select name="system.ability">
-                        {{selectOptions config.abilities selected=system.ability localize=true}}
+                   <select name="system.armorType">
+                        {{selectOptions config.armorTypes selected=system.armorType localize=true}}
                    </select> 
                 </td>
                 <td>
-                    <select name="system.weaponType">
-                        {{selectOptions config.weaponTypes selected=system.weaponType localize=true}}
-                    </select>
+                    <input type="number" name="system.armor" value="{{system.armor}}">
                 </td>
                 <td>
                     <input name="system.quality" type="text" value="{{system.quality}}">
@@ -30,9 +27,6 @@
                     <input name="system.usury.value" type="number" value="{{system.usury.value}}" data-dtype="Number">
                     <span>/</span>
                     <input type="number" name="system.usury.max" value="{{system.usury.max}}">
-                </td>
-                <td>
-                    <input name="system.formula" type="text" value="{{system.formula}}">
                 </td>
             </tr>
         </table>

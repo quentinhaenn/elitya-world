@@ -201,15 +201,22 @@
         },
         "armor":{
             "templates":["itemDescription","equipement", "physicalItem"],
-            "armor":5
+            "armor":5,
+            "armorType": "Armor"
         },
         "spell": {
             "templates":["itemDescription","base-consumable", "action"],
             "magicType": "common",
-            "cost": 2
+            "cost": 2,
+            "level": 1
         },
         "consumable":{
-            "templates":["itemDescription","base-consumable", "physicalItem"]
+            "templates":["itemDescription","base-consumable", "physicalItem"],
+            "consumableType":"potion",
+            "usage" :{
+                "value":0,
+                "max":5
+            }
         },
         "item":{
             "templates" :["itemDescription","physicalItem"]

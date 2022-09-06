@@ -49,3 +49,28 @@ ELITYAWORLD.weaponTypes = {
   axe : "ELITYAWORLD.Axe",
   longSword : "ELITYAWORLD.LongSword"
 }
+
+ELITYAWORLD.consumableTypes = {
+  potion : "ELITYAWORLD.Potion",
+  parchment : "ELITYAWORLD.Parchment",
+  arrow : "ELITYAWORLD.Arrow",
+  bolt : "ELITYAWORLD.Bolt",
+  bomb : "ELITYAWORLD.Bomb",
+  poison : "ELITYAWORLD.Poison"
+}
+
+ELITYAWORLD.magicTypes = {
+  air : "ELITYAWORLD.Air",
+  earth : "ELITYAWORLD.Earth",
+  fire : "ELITYAWORLD.Fire",
+  water : "ELITYAWORLD.Water",
+  common : "ELITYAWORLD.Common"
+}
+
+ELITYAWORLD.armorTypes = {
+  chest : "ELITYAWORLD.ArmorChest",
+  gauntlet : "ELITYAWORLD.ArmorGauntlet",
+  leggings : "ELITYAWORLD.ArmorLeggings",
+  helmet : "ELITYAWORLD.ArmorHelmet",
+  shield : "ELITYAWORLD.ArmorShield"
+}

@@ -1,0 +1,33 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
+        <h1><input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'ELITYAWORLD.NewItem' }}"/></h1>
+    </header>
+    <div class="sheet-content">
+        <table>
+            <tr>
+                <th>{{ localize "ELITYAWORLD.SpellSchool"}}</th>
+                <th>{{ localize "ELITYAWORLD.Level"}}</th>
+                <th>{{ localize "ELITYAWORLD.Cost"}}</th>
+                <th>{{ localize "ELITYAWORLD.Damages"}}</th>
+            </tr>
+            <tr>
+                <td>
+                   <select name="system.magicType">
+                        {{selectOptions config.magicTypes selected=system.magicType localize=true}}
+                   </select> 
+                </td>
+                <td>
+                    <input type="text" name="system.level" value="{{system.level}}">
+                </td>
+                <td>
+                    <input name="system.cost" type="text" value="{{system.cost}}">
+                </td>
+                <td>
+                    <input name="system.formula" type="text" value="{{system.formula}}">
+                </td>
+            </tr>
+        </table>
+        {{editor system.itemDescription.description target="system.itemDescription.description" button=true owner=owner editable=editable}}
+    </div>
+</form>

@@ -1,0 +1,23 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
+        <h1><input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'ELITYAWORLD.NewItem' }}"/></h1>
+    </header>
+    <div class="sheet-content">
+        <table>
+            <tr>
+                <th>{{ localize "ELITYAWORLD.Weight"}}</th>
+                <th>{{ localize "ELITYAWORLD.Rarity"}}</th>
+            </tr>
+            <tr>
+                <td>
+                    <input name="system.weight" type="number" value="{{system.weight}}">
+                </td>
+                <td>
+                    <input name="system.rarity" type="number" value="{{system.rarity}}">
+                </td>
+            </tr>
+        </table>
+        {{editor system.itemDescription.description target="system.itemDescription.description" button=true owner=owner editable=editable}}
+    </div>
+</form>

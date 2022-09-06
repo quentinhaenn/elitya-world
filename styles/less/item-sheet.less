@@ -1,7 +1,22 @@
-.sheet {
+@import "./variables.less";
+
+.elityaworld.sheet.item {
+    min-height: 330px;
+    min-width: 560px;
+
     form {
         display: flex;
         flex-direction: column;
+    }
+
+    .sheet-header {
+        input {
+            color: @colorLabel;
+            font-size: 50px !important;
+            font-weight: 400;
+            .modesto();
+        }
+
     }
     .sheet-content {
         height: 100%;
@@ -9,6 +24,35 @@
         flex-direction: column;
         .editor{
             height: 100%;
+        }
+
+        th {
+            color: @colorLabel;
+            font-size: 18px;
+            font-weight: 400;
+            padding: 2px 5px 0;
+            .modesto();
+
+            &:last-child{
+                padding-right: 0;
+            }
+        }
+        td {
+            font-size: 15px;
+            padding: 2px 5px 0;
+            text-align: center;
+
+            input {
+                text-transform: capitalize;
+            }
+
+            input[type=number] {
+                width : 36px;
+            }
+
+            &:last-child{
+                padding-right: 0;
+            }
         }
     }
 }
