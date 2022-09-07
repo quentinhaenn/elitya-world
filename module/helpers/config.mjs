@@ -23,7 +23,7 @@ ELITYAWORLD.abilityAbbreviations = {
 };
 
 ELITYAWORLD.skills = {
-  "heavyWWea" :{label: "ELITYAWORLD.SkillHeavyWea", ability: "phy" } ,
+  "heavyWea" :{label: "ELITYAWORLD.SkillHeavyWea", ability: "phy" } ,
   "mel" :{label: "ELITYAWORLD.SkillMel", ability: "phy" },
   "par" :{label: "ELITYAWORLD.SkillPar", ability: "phy" },
   "for" :{label: "ELITYAWORLD.SkillFor", ability: "phy" },
@@ -73,4 +73,19 @@ ELITYAWORLD.armorTypes = {
   leggings : "ELITYAWORLD.ArmorLeggings",
   helmet : "ELITYAWORLD.ArmorHelmet",
   shield : "ELITYAWORLD.ArmorShield"
+}
+
+ELITYAWORLD.materials = {
+  iron : "ELITYAWORLD.Iron",
+  steel : "ELITYAWORLD.Steel",
+  leather : "ELITYAWORLD.Leather",
+  orichalcum : "ELITYAWORLD.Orichalcum"
+}
+
+ELITYAWORLD.weaponCategories = {
+  lightWea : "ELITYAWORLD.LightWeapon",
+  legacy : "ELITYAWORLD.Legacy",
+  throwingWea : "ELITYAWORLD.ThrowingWeapon",
+  shootWea : "ELITYAWORLD.ShootingWeapon",
+  heavyWea : "ELITYAWORLD.HeavyWeapon"
 }

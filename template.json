@@ -185,7 +185,8 @@
                     "min" : 0,
                     "max" : 20
                 },
-                "quality" : "novice"
+                "quality" : "novice",
+                "material" : "iron"
             },
             "base-consumable" : {
                 "effect": ""
@@ -197,12 +198,14 @@
         },
         "weapon":{
             "templates":["itemDescription","physicalItem","equipement", "action"],
-            "weaponType": "simpleM"
+            "weaponType": "simpleM",
+            "weaponCategory" : "Light"
         },
         "armor":{
             "templates":["itemDescription","equipement", "physicalItem"],
             "armor":5,
-            "armorType": "Armor"
+            "armorType": "Armor",
+            "armorCategory" : "clothes"
         },
         "spell": {
             "templates":["itemDescription","base-consumable", "action"],

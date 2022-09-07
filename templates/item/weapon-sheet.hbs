@@ -2,6 +2,18 @@
     <header class="sheet-header">
         <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
         <h1><input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'ELITYAWORLD.NewItem' }}"/></h1>
+        <aside class="weapon-characteristics">
+            <div class="weapon-category">
+                <label>{{ localize "ELITYAWORLD.WeaponCategory"}}</label>
+                <select name="system.weaponCategory">
+                {{selectOptions config.weaponCategories selected=system.weaponCategory localize=true}}
+                </select>
+            </div>
+            <div class="weapon-weight">
+                <label>{{ localize "ELITYAWORLD.Weight"}}</label>
+                <input type="number" name="system.weight" value="{{system.weight}}" title="{{localize "ELITYAWORLD.Weight"}}">
+            </div>
+        </aside>
     </header>
     <div class="sheet-content">
         <table>

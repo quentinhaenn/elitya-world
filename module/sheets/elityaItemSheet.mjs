@@ -5,7 +5,7 @@ export default class ElityaItemSheet extends ItemSheet {
         return mergeObject(super.defaultOptions , {
             width: 530,
             height: 340,
-            classes: ["elityaworld", "sheet", "item"]
+            classes: ["elityaworld", "sheet", "item", "weapon"]
         });
     }
 

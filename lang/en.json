@@ -55,6 +55,7 @@
         "SkillTra" : "Tracking",
         "SkillSpi" : "Spinning",
         "WeaponType" : "Weapon Type",
+        "WeaponCategory" : "Weapon Category",
         "Damages" : "Damages",
         "Dagger" : "Dagger",
         "Axe" : "Axe",
@@ -92,6 +93,16 @@
         "ArmorChest" : "Chest",
         "ConsumableType" : "Consumable Type",
         "Usage" : "Usage",
-        "Potion" : "Potion"
+        "Potion" : "Potion",
+        "Material" : "Material",
+        "Iron" : "Iron",
+        "Steel" : "Steel",
+        "Leather" : "Leather",
+        "Orichalcum" : "Orichalcum",
+        "LightWeapon" : "Light",
+        "Legacy" : "Legacy",
+        "ThrowingWeapon" : "Throwing",
+        "ShootingWeapon" : "Shooting",
+        "HeavyWeapon" : "Heavy"
     }
 }
