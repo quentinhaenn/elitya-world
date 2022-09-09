@@ -20,15 +20,14 @@ export default class ElityaActorSheet extends ActorSheet {
         const context = await super.getData();
         
         console.log("Elitya | récupération des data context");
-        console.log(context.actor);
+        console.log(context);
         context.config = CONFIG.ELITYAWORLD;
         
         const actor = context.actor;
         const source = actor.toObject();
 
-        for (let [k,v] of Object.entries(actor.system.abilities)){
-            v.label = game.i18n.localize(context.config.abilities[k]) ?? k;
-        }
+        this._prepareCharacterData(actor);
+        this._prepareItems(context);
 
         foundry.utils.mergeObject(context, {
             source: source.system,
@@ -44,7 +43,9 @@ export default class ElityaActorSheet extends ActorSheet {
 
 
     _prepareItems(context) {
-        const gear = [];
+        const weapons = [];
+        const armors = [];
+        const others = [];
         const consumables = [];
         const spells = {
             "water":[],
@@ -55,23 +56,33 @@ export default class ElityaActorSheet extends ActorSheet {
 
         for (let i of context.items) {
             i.img = i.img || DEFAULT_TOKEN;
-            if((i.type === 'weapon') || (i.type === 'armor') || (i.type === 'item')){
-                gear.push(i)
-            }
-
-            else if (i.type === 'spell') {
-                if(i.data.magicType != undefined) {
-                    spells[i.data.magicType].push(i);
-                }
-            }
-
-            else if (i.type === 'consumable') {
-                consumables.push(i);
+            switch (i.type) {
+                case 'weapon' :
+                    weapons.push(i);
+                    break;
+                case 'armor' :
+                    armors.push(i);
+                    break;
+                case 'item' :
+                    others.push(i);
+                    break;
+                case 'spell' :
+                    if (i.system.magicType !=undefined) {
+                        spells[i.system.magicType].push(i);
+                    }
+                    break;
+                case 'consumable' :
+                    consumables.push(i);
+                    break;
             }
         }
-
-        context.gear = gear;
-        context.consumables = consumables;
+         const actorItems = {
+            weapons: weapons,
+            armors: armors,
+            consumables: consumables,
+            others: others,
+        }
+        context.actorItems = actorItems;
         context.spells = spells;
     }
 

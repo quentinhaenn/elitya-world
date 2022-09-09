@@ -3,7 +3,7 @@
         <img class="profile-img" src="{{actor.img}}" title="{{actor.name}}" data-edit="img">
         <section class="header-details flexrow">
             <h1 class="charname">
-                <input class="name" type="text" value="{{actor.name}}" placeholder="{{localize "ELITYAWORLD.ActorName"}}"/>
+                <input class="name" name="name" type="text" value="{{actor.name}}" placeholder="{{localize "ELITYAWORLD.ActorName"}}"/>
             </h1>
 
             <aside class="header-exp flexcol">
@@ -102,7 +102,7 @@
         </div>
 
         <div class="tab inventory flexcol" data-group="primary" data-tab="inventory">
-            bloublou
+            {{> "systems/elitya-world/templates/actor/parts/actor-inventory.hbs"}}
         </div>
 
         <div class="tab spells flexcol" data-group="primary" data-tab="spells">
