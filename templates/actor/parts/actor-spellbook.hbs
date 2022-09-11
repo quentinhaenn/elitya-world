@@ -1,0 +1,44 @@
+<ol class="items-list inventory-list">
+    {{log this}}
+{{#each actorSpells as |section sid| }}
+{{log sid}}
+    <li class="item-header flexrow">
+        <h3 class="item-name flexrow"> {{localize sid}}</h3>
+        <div class="item-detail item-cost"> {{localize "ELITYAWORLD.Cost"}}</div>
+        <div class="item-detail item-damages"> {{localize "ELITYAWORLD.Damages"}}</div>
+        <div class="item-detail item-effects"> {{localize "ELITYAWORLD.Effects"}}</div>
+    </li>
+
+    <ol class="item-list">
+        {{#each section as |spell iid|}}
+        {{log spell}}
+            <li class="item flexrow {{section.css}}"
+            {{#if section.editableName}} data-item-index="{{iid}}"{{else}}data-item-id="{{spell._id}}"{{/if}}>
+                <div class="item-name flexrow">
+                    <div class="item-image" tabindex="0" role="button" aria-label="{{spell.name}}" style="background-image: url('{{spell.img}}')"></div>
+                    <h4>
+                        {{spell.name}} {{spell.system.quantity}}
+                    </h4>
+                </div>
+                <div class="item-detail item-cost">
+                    <div class="item-detail">
+                        {{spell.system.cost}}
+                    </div>
+                </div>
+                <div class="item-detail item-damages">
+                    <div class="item-detail">
+                        {{spell.system.formula}}
+                    </div>
+                </div>
+                <div class="item-detail item-effect">
+                    <div class="item-detail">
+                        {{spell.system.effect}}
+                    </div>
+                </div>
+            </li>
+        {{/each}}
+    </ol>
+
+
+{{/each}}
+</ol>

@@ -106,10 +106,11 @@
         </div>
 
         <div class="tab spells flexcol" data-group="primary" data-tab="spells">
-            bloubli
+            {{log this}}
+            {{> "systems/elitya-world/templates/actor/parts/actor-spellbook.hbs"}}
         </div>
 
-        <div class="tab flexrow" data-group="primary" data-tab="biography">
+        <div class="tab details flexrow" data-group="primary" data-tab="biography">
             <div class="characteristics flexcol">
                 <label>{{ localize "ELITYAWORLD.Appearance" }}</label>
                 <textarea name="system.details.appearance">{{system.details.appearance}}</textarea>

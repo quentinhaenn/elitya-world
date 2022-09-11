@@ -571,7 +571,8 @@
   resize: none;
 }
 .elityaworld.sheet.actor .tab.inventory,
-.elityaworld.sheet.actor .tab.spellbook {
+.elityaworld.sheet.actor .tab.spells,
+.elityaworld.sheet.actor .tab.details {
   overflow-y: hidden;
 }
 .elityaworld.sheet.actor .inventory-list {
@@ -651,6 +652,7 @@
   color: #880101;
 }
 .elityaworld.sheet.actor.character .characteristics textarea {
+  height: 100px;
   font-family: "Signika", serif;
   font-size: 13px;
   border: 2px groove #D8A500;

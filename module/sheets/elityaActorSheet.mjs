@@ -48,10 +48,10 @@ export default class ElityaActorSheet extends ActorSheet {
         const others = [];
         const consumables = [];
         const spells = {
-            "water":[],
-            "earth":[],
-            "fire":[],
-            "common": []
+            water:[],
+            earth:[],
+            fire:[],
+            common: []
         };
 
         for (let i of context.items) {
@@ -83,7 +83,7 @@ export default class ElityaActorSheet extends ActorSheet {
             others: others,
         }
         context.actorItems = actorItems;
-        context.spells = spells;
+        context.actorSpells = spells;
     }
 
     _prepareCharacterData(context) {
