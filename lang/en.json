@@ -1,7 +1,7 @@
 {
     "ELITYAWORLD" : {
         "ActorName": "Actor's Name",
-        "NewItem": "New {itemType}",
+        "NewItem": "New {type}",
         "AbilityPhy":"Physical",
         "AbilityDex": "Dexterity",
         "AbilityCon": "Constitution",
@@ -103,6 +103,15 @@
         "Legacy" : "Legacy",
         "ThrowingWeapon" : "Throwing",
         "ShootingWeapon" : "Shooting",
-        "HeavyWeapon" : "Heavy"
+        "HeavyWeapon" : "Heavy",
+        "Add" : "Add",
+        "ItemCreate": "Create Item",
+        "ItemEdit" : "Edit Item",
+        "ItemDelete" : "Delete Item",
+        "ItemTypeWeapon" : "Weapon",
+        "ItemTypeArmor" : "Armor",
+        "ItemTypeConsumable" : "Consumable",
+        "ItemTypeSpell" : "Spell",
+        "ItemTypeItem" : "Item"
     }
 }

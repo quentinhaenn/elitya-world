@@ -48,7 +48,7 @@
         }
       }
 
-      .characteristics {
+    .characteristics {
         flex: 0 0 180px;
         height: 100%;
         padding: 0 3px 3px;
@@ -61,22 +61,33 @@
           text-align: center;
           color: @colorLabel;
         }
-        textarea {
+      textarea {
           height: 100px;
           font-family: "Signika", serif;
           font-size: 13px;
           border: @borderGroove;
           resize: none;
         }
-      }
+    }
     
-      .biography {
-        max-width: calc(100% - 180px);
+    .biography {
+      max-width: calc(100% - 180px);
 
-        .editor {
+      .editor {
           height: 100%;
           padding: 0 5px 5px;
           border: @borderGroove;
+      }
+    }
+
+    .inventory,
+    .spellbook {
+      .item-controls {
+        flex: 0 0 68px;
+        
+        .item-control {
+          align-items: center;
+        }
         }
       }
 }

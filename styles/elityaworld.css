@@ -598,6 +598,9 @@
   border-left: 1px solid #c9c7b8;
   border-right: 1px solid #c9c7b8;
 }
+.elityaworld.sheet.actor .inventory-list .item-controls {
+  flex: 0 0 44px;
+}
 .elityaworld.sheet.actor.character {
   min-width: 720px;
   min-height: 680px;
@@ -665,6 +668,14 @@
   height: 100%;
   padding: 0 5px 5px;
   border: 2px groove #D8A500;
+}
+.elityaworld.sheet.actor.character .inventory .item-controls,
+.elityaworld.sheet.actor.character .spellbook .item-controls {
+  flex: 0 0 68px;
+}
+.elityaworld.sheet.actor.character .inventory .item-controls .item-control,
+.elityaworld.sheet.actor.character .spellbook .item-controls .item-control {
+  align-items: center;
 }
 .elityaworld.sheet.actor .sheet-header .name {
   color: #880101;

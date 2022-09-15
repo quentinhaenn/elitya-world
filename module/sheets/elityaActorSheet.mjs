@@ -33,10 +33,9 @@ export default class ElityaActorSheet extends ActorSheet {
             source: source.system,
             system: actor.system,
             labels: actor.labels
-        })
-        console.log(actor);
+        });
         
-        return context
+        return context;
     }
 
     
@@ -48,6 +47,7 @@ export default class ElityaActorSheet extends ActorSheet {
         const others = [];
         const consumables = [];
         const spells = {
+            air : [],
             water:[],
             earth:[],
             fire:[],
@@ -98,8 +98,43 @@ export default class ElityaActorSheet extends ActorSheet {
 
 
     activateListeners(html) {
+
+        html.find(".item-create").click(this._onItemCreate.bind(this));
+        html.find(".item-edit").click(this._onItemEdit.bind(this));
+        html.find(".item-delete").click(this._onItemDelete.bind(this));
+
+
         super.activateListeners(html);
 
+    }
+
+    _onItemCreate(event) {
+        event.preventDefault();
+        const header = event.currentTarget;
+        let type = header.dataset.type.slice(0,-1);
+        console.log(type)
+        if(type === 'other') type='item';
+        const itemData = {
+            name: game.i18n.format("ELITYAWORLD.NewItem", {type: game.i18n.localize(`ELITYAWORLD.ItemType${type.capitalize()}`)}),
+            type: type,
+            system: foundry.utils.deepClone(header.dataset)
+        };
+        delete itemData.system.type;
+        return this.actor.createEmbeddedDocuments("Item",[itemData]);
+    }
+
+    _onItemEdit(event) {
+        event.preventDefault();
+        const li = event.currentTarget.closest(".item");
+        const item = this.actor.items.get(li.dataset.itemId);
+        return item.sheet.render(true);
+    }
+
+    _onItemDelete(event) {
+        const li = event.currentTarget.closest(".item");
+        const item = this.actor.items.get(li.dataset.itemId);
+        if (!item) return;
+        return item.delete();
     }
 
 }

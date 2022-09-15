@@ -3,6 +3,12 @@
     <li class="item-header flexrow">
         <h3 class="item-name flexrow"> {{localize sid}}</h3>
         <div class="item-detail item-weight"> {{localize "ELITYAWORLD.Weight"}}</div>
+        <div class="item-controls flexrow">
+            <a class="item-control item-create" title='{{localize "ELITYAWORLD.ItemCreate"}}' data-type={{sid}}>
+                <i class="fas fa-plus"></i> {{localize "ELITYAWORLD.Add"}}
+            </a>
+        </div>
+        
     </li>
 
     <ol class="item-list">
@@ -20,6 +26,11 @@
                         {{item.system.weight}}
                     </div>
                 </div>
+                <div class="item-controls flexrow">
+                    <div>  </div>
+                <a class="item-control item-edit" title='{{localize "ELITYAWORLD.ItemEdit"}}'><i class="fas fa-edit"></i></a>
+                <a class="item-control item-delete" title='{{localize "ELITYAWORLD.ItemDelete"}}'><i class="fas fa-trash"></i></a>
+            </div>
             </li>
         {{/each}}
     </ol>

@@ -18,6 +18,7 @@ Hooks.once("init",function() {
     Actors.registerSheet("elitya-world", ElityaActorSheet, {makeDefault : true});
 
     preloadHandlebarsTemplates();
+
 });
 
 Hooks.once("ready", function() {
